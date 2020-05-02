@@ -1,0 +1,19 @@
+DROP TABLE IF EXISTS produto;
+DROP TABLE IF EXISTS usuarios;
+
+CREATE TABLE produtos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  codigo VARCHAR(250) NOT NULL,
+  descricao VARCHAR(250) NOT NULL,
+  valor_unitario DOUBLE DEFAULT NULL,
+  data_de_criacao TIMESTAMP DEFAULT NULL,
+  ativo TINYINT NOT NULL
+);
+
+CREATE TABLE usuarios (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+  	login VARCHAR(250) NOT NULL,
+  	senha VARCHAR(250) NOT NULL
+);
+
+INSERT INTO usuarios(login, senha) VALUES('user', 'test');
